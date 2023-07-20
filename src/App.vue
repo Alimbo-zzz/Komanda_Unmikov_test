@@ -13,11 +13,5 @@ import './main.scss';
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
-	padding-top: 4em;
-	padding-bottom: 6em;
-	min-height: 100vh;
-	overflow-x: hidden;
-	min-width: $min_w;
-}
+@import "./main.scss";
 </style>
