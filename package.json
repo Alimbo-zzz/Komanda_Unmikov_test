@@ -6,7 +6,8 @@
   "scripts": {
     "start": "vite --host --open",
     "build": "vite build",
-    "preview": "vite preview  --host --open"
+    "preview": "vite preview  --host --open",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "cover 99.5%"
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "gh-pages": "^5.0.0",
     "vite": "^4.4.0"
   }
 }

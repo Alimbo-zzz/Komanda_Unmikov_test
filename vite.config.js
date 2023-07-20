@@ -9,6 +9,7 @@ export const src = resolve(__dirname, 'src');
 
 
 export default defineConfig({
+  base: '/Komanda_Unmikov_test/',
   root,
   plugins: [vue()],
   server: { port: 3030 },
