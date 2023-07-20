@@ -1,0 +1,46 @@
+.nav {
+	padding: 0.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.link {
+	cursor: pointer;
+	transition: 0.3s;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0.5em 1em;
+	text-shadow: 0.02em 0.02em 0.1em rgba(255, 255, 255, 1);
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		width: 0;
+		transition: 0.2s;
+		height: 0.1em;
+		background: currentColor;
+		opacity: 0;
+	}
+
+	&:hover::before {
+		opacity: 1;
+		width: calc(100% - 2em);
+	}
+
+
+	&.router-link-active {
+		color: $mainDecor;
+		text-shadow: 0.1em 0.1em 0.1em rgba($color: $mainText, $alpha: 0.2);
+
+		&::before {
+			background: $mainDecor;
+			opacity: 1;
+			width: calc(100% - 2em);
+		}
+	}
+}

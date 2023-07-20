@@ -1,0 +1,162 @@
+.wrap {
+	position: relative;
+}
+
+
+.decor-1 {
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	user-select: none;
+	width: 700px;
+	transform: translate(-50%, -40%);
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	background: $danger;
+
+	@media(max-width: $tablet) {
+		width: 80vw;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 85%;
+		aspect-ratio: 1/1;
+		border-radius: inherit;
+		background: #222;
+		z-index: 10;
+	}
+}
+
+.decor-2 {
+	position: absolute;
+	z-index: -1;
+	right: 0;
+	top: 0;
+	pointer-events: none;
+	user-select: none;
+	width: 700px;
+	transform: translate(60%, -10%);
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	background: $mainDecor;
+
+	@media(max-width: $tablet) {
+		width: 80vw;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 85%;
+		aspect-ratio: 1/1;
+		border-radius: inherit;
+		background: #222;
+		z-index: 10;
+	}
+}
+
+.title {
+	text-align: center;
+	font-size: 5em;
+	text-shadow: 0.1em 0.1em rgba($color: $mainDecor, $alpha: 1.0), 0.02em 0.02em 0.1em rgba(255, 255, 255, 1);
+}
+
+
+
+.grid {
+	display: flex;
+	flex-direction: column;
+	gap: 6em;
+
+
+
+}
+
+
+
+.all-places {
+
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 2em 1em;
+
+		@media(max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media(max-width: $phone) {
+			grid-template-columns: 1fr;
+			gap: 4em;
+		}
+	}
+}
+
+
+
+.random-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3em;
+	user-select: none;
+
+	@media(max-width: $phone) {
+		flex-direction: column-reverse;
+
+		&__btn {
+			font-size: 1.4em;
+		}
+	}
+
+	&__card {
+		max-width: 400px;
+		width: 100%;
+		aspect-ratio: 4/3;
+	}
+
+
+	&__empty {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 8em;
+		background: $mainDecor;
+		box-shadow: 0.1em 0.1em 0.5em 0 rgba($color: #000, $alpha: 0.5);
+	}
+
+
+	&__btn {
+		background: $danger;
+		color: $white;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		border: none;
+		padding: 0.5em;
+		max-width: 15em;
+		box-shadow: 0.1em 0.1em 0.5em 0.1em rgba($color: #000, $alpha: 0.5);
+		cursor: pointer;
+		transition: 0.2s cubic-bezier(.14, 1.49, .7, 1.13);
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		&:active {
+			transform: scale(1);
+		}
+	}
+}
