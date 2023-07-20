@@ -16,6 +16,7 @@ import './main.scss';
 .wrapper {
 	padding-top: 4em;
 	padding-bottom: 6em;
+	min-height: 100vh;
 	overflow-x: hidden;
 	min-width: $min_w;
 }
